@@ -14,6 +14,6 @@ Breadboards are an excellent way to prototype projects. https://en.wikipedia.org
 
 ## Power
 
-Bigger breadboards usually have seperate pin lanes for providing power to the project. The mini breadboards don't have those, but can easily be created.
+Bigger breadboards usually have seperate pin lanes for providing power to the project. The mini breadboards don't have those, but they can easily be created.
 
 ![Powerline providing 5V and ground](assets/breadboard-power.jpg)

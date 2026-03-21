@@ -45,7 +45,7 @@ int myFunction(int x, int y)
 
 ## Glossary
 
-A B C D E F [G](#G) H I J K [L](#L) M N O [P](#P) Q R S T U [V](#V]) W X Y Z
+A B C D E F [G](#G) H I J K [L](#L) M N O [P](#P) Q R S T U [V](#V) W X Y Z
 
 <a name="G"></a>
 
@@ -70,5 +70,5 @@ A B C D E F [G](#G) H I J K [L](#L) M N O [P](#P) Q R S T U [V](#V]) W X Y Z
 
 #### V
 
-- VCC [Voltage at the Common Collector](https://en.wikipedia.org/wiki/IC_power-supply_pin)
-- VIN [Voltage Input](https://en.wikipedia.org/wiki/Voltage_divider)
+- VCC - [Voltage at the Common Collector](https://en.wikipedia.org/wiki/IC_power-supply_pin)
+- VIN - [Voltage Input](https://en.wikipedia.org/wiki/Voltage_divider)

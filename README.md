@@ -45,7 +45,7 @@ int myFunction(int x, int y)
 
 ## Glossary
 
-A B C D E F [G](#G) H I J K [L](#L) M N O [P](#P) Q R S T U [V](#V) W X Y Z
+A B C D E F [G](#G) H [I](#I) J K [L](#L) M N O [P](#P) Q R S T U [V](#V) W X Y Z
 
 <a name="G"></a>
 
@@ -53,12 +53,19 @@ A B C D E F [G](#G) H I J K [L](#L) M N O [P](#P) Q R S T U [V](#V) W X Y Z
 
 - GPIO - [General-Purpose Input/Output](https://en.wikipedia.org/wiki/General-purpose_input/output)
 
+<a name="I"></a>
+
+#### I
+
+- I2C or IIC - [Inter-Integrated Circuit](https://en.wikipedia.org/wiki/I2C)
+
 <a name="L"></a>
 
 #### L
 
-- LED - [Light Emitting Diode](https://en.wikipedia.org/wiki/Light-emitting_diode)
 - LDR - [Light Dependent Resistor](https://en.wikipedia.org/wiki/Photoresistor)
+- LED - [Light Emitting Diode](https://en.wikipedia.org/wiki/Light-emitting_diode)
+- LLC - [Logic Level Converter](https://en.wikipedia.org/wiki/Level_shifter) or Level Shifter
 
 <a name="P"></a>
 

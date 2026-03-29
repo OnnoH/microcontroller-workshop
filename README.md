@@ -45,7 +45,19 @@ int myFunction(int x, int y)
 
 ## Glossary
 
-A B C D E F [G](#G) H [I](#I) J K [L](#L) M N O [P](#P) Q R S T U [V](#V) W X Y Z
+[A](#A) B [C](#C) D E F [G](#G) H [I](#I) J K [L](#L) M N O [P](#P) Q R S T U [V](#V) W X Y Z
+
+<a name="A"></a>
+
+#### A
+
+- [Anode](https://en.wikipedia.org/wiki/Anode) in a diode is positively charged - see also: https://www.geeksforgeeks.org/chemistry/cathode-and-anode/
+
+<a name="C"></a>
+
+#### C
+
+- [Cathode](https://en.wikipedia.org/wiki/Cathode) in a diode is negatively charged - see also: https://www.geeksforgeeks.org/chemistry/cathode-and-anode/
 
 <a name="G"></a>
 

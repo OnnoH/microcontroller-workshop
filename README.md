@@ -4,6 +4,14 @@ Having fun with microcontrollers like ESPs, Arduinos, Picos etc.
 
 https://en.wikipedia.org/wiki/Microcontroller
 
+Next to this repository, you'll find a lot of information on the world wide web. Some great places to start looking for examples and inspiration:
+
+- https://www.iotsnacks.com
+- https://hackaday.io
+- https://esp32io.com
+- https://randomnerdtutorials.com
+- ...
+
 ## Development
 
 Two common environments to develop applications for microcontrollers are:
@@ -45,7 +53,7 @@ int myFunction(int x, int y)
 
 ## Glossary
 
-[A](#A) B [C](#C) D E F [G](#G) H [I](#I) J K [L](#L) M N O [P](#P) Q R S T U [V](#V) W X Y Z
+[A](#A) B [C](#C) D E F [G](#G) H [I](#I) J K [L](#L) M N O [P](#P) Q R S T [U](#U) [V](#V) W X Y Z
 
 <a name="A"></a>
 
@@ -85,7 +93,12 @@ int myFunction(int x, int y)
 
 - PCB - [Printed Circuit Board](https://en.wikipedia.org/wiki/Printed_circuit_board)
 
-<a name="V"></a>
+<a name="U"></a>
+
+#### U
+
+- UART - [Universal Asynchronous Receiver/Transmitter](https://en.wikipedia.org/wiki/Universal_asynchronous_receiver-transmitter)
+  <a name="V"></a>
 
 #### V
 

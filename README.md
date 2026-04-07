@@ -53,7 +53,7 @@ int myFunction(int x, int y)
 
 ## Glossary
 
-[A](#A) B [C](#C) D E F [G](#G) H [I](#I) J K [L](#L) M N O [P](#P) Q R S T [U](#U) [V](#V) W X Y Z
+[A](#A) B [C](#C) D E F [G](#G) H [I](#I) J K [L](#L) [M](#M) N O [P](#P) Q R S T [U](#U) [V](#V) W X Y Z
 
 <a name="A"></a>
 
@@ -78,6 +78,7 @@ int myFunction(int x, int y)
 #### I
 
 - I2C or IIC - [Inter-Integrated Circuit](https://en.wikipedia.org/wiki/I2C)
+- IoT - [Internet of Things](https://en.wikipedia.org/wiki/Internet_of_things)
 
 <a name="L"></a>
 
@@ -86,6 +87,12 @@ int myFunction(int x, int y)
 - LDR - [Light Dependent Resistor](https://en.wikipedia.org/wiki/Photoresistor)
 - LED - [Light Emitting Diode](https://en.wikipedia.org/wiki/Light-emitting_diode)
 - LLC - [Logic Level Converter](https://en.wikipedia.org/wiki/Level_shifter) or Level Shifter
+
+<a name="M"></a>
+
+#### M
+
+- MQTT - [Message Queuing Telemetry Transport](https://en.wikipedia.org/wiki/MQTT)
 
 <a name="P"></a>
 

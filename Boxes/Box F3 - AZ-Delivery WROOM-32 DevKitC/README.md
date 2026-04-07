@@ -1,5 +1,11 @@
 # Box F3 - AZ-Delivery WROOM-32 DevKitC
 
+![Board](assets/az-delivery-wroom-32%20devkitc-v4.jpg)
+
+## Pinout
+
+![Pinout](assets/az-delivery-wroom-32%20devkitc-pinout.png)
+
 ## Package Contents
 
 - AZ-Delivery WROOM-32 DevKitC v4 board

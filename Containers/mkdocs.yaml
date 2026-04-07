@@ -1,0 +1,65 @@
+site_name: Fun with microcontrollers
+
+nav:
+  - Home: README.md
+  - Arduino: "Arduino/README.md"
+  - Boxes:
+      - "Box A": "Boxes/Box A - Arduino Nano/README.md"
+      - "Box B": "Boxes/Box B - AZ-Delivery Envy/README.md"
+      - "Box C": "Boxes/Box C - WeMos ESP OLED/README.md"
+      - "Box D": "Boxes/Box D - NodeMCU/README.md"
+      - "Box E": "Boxes/Box E - NodeMCU v3/README.md"
+      - "Box F1": "Boxes/Box F1 - AZ-Delivery WROOM-32 DevKitC/README.md"
+      - "Box F2": "Boxes/Box F2 - AZ-Delivery WROOM-32 DevKitC/README.md"
+      - "Box F3": "Boxes/Box F3 - AZ-Delivery WROOM-32 DevKitC/README.md"
+      - "Box G": "Boxes/Box G - ESP D1 Mini/README.md"
+      - "Box H": "Boxes/Box H - Arduino Uno/README.md"
+  - Generic:
+      - "Breadboard": "Generic/Breadboard/README.md"
+      - "Empty Sketch": "Generic/Empty Sketch/README.md"
+      - "I2C": "Generic/I2C/README.md"
+      - "LLC": "Generic/Logic Level Converter/README.md"
+  - Networking:
+      - "WiFi": "Network/WiFi/README.md"
+      - "Access Point": "Network/AccessPoint/README.md"
+      - "Web Server": "Network/WebServer/README.md"
+      - "MQTT": "Network/MQTT/README.md"
+  - Peripherals:
+      - Displays:
+          - "OLED": "Displays/SSD1306 OLED Display/README.md"
+          - "LCD": "Displays/LCD/README.md"
+          - "4-Digit 7-Segment": "Displays/TM1637 4-Digit LED 7-Segment Display/README.md"
+      - Lights:
+          - "LED": "Lights/Single Led/README.md"
+          - "RGB LED": "Lights/RGB LED/README.md"
+          - "LED Ring": "Lights/RGB WS2812 8-Bit LED Ring/README.md"
+          - "Colour Changing LED": "Lights/Automatic Colour Changing LED/README.md"
+      - Sensors:
+          - "AM312 PIR Motion Sensor": "Sensors/AM312 PIR Motion Sensor/README.md"
+          - "HC-SR501": "Sensors/HC-SR501 PIR Motion Sensor/README.md"
+          - "DHT11": "Sensors/DHT11 Temperature and Humidity Sensor/README.md"
+          - "BME/BMP280": "Sensors/BMP280 Temperature and Humidity Sensor/README.md"
+          - "HC-SR04": "Sensors/HC-SR04 Ultrasonic Sensor/README.md"
+          - "LDR": "Sensors/LDR Light Dependent Resistor/README.md"
+          - "Raindrop Sensor": "Sensors/Raindrop Sensor/README.md"
+          - "Vibration Sensor": "Sensors/SW-420 Vibration Sensor/README.md"
+          - "Water Level Sensor": "Sensors/Water Sensor/README.md"
+      - Sound:
+          - "Buzzer": "Sound/Buzzer/README.md"
+      - Switches:
+          - "Push Button": "Switches/Button/README.md"
+          - "Reed Switch": "Switches/ReedSwitch/README.md"
+          - "Rotary Encoder": "Switches/RotaryEncoder/README.md"
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - tables
+
+theme:
+  name: "material"

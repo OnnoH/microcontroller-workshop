@@ -12,12 +12,21 @@ Next to this repository, you'll find a lot of information on the world wide web.
 - https://randomnerdtutorials.com
 - ...
 
+## Boxes
+
+For the workshop, some sample boxes were assembled, ready for exploration and experimenting. They are listed in this [section](./Boxes).
+
+> TODO? Create shopping list
+
+Of course the explanation on how to develop, program a peripheral, and putting it into practice is not bound to having these boxes available. It can be seen as a generic reference.
+
 ## Development
 
-Two common environments to develop applications for microcontrollers are:
+Three environments to develop applications for microcontrollers are:
 
-- PlatformIO (https://platformio.org)
-- Arduino IDE (https://www.arduino.cc/en/software/)
+- [PlatformIO](https://platformio.org)
+- [Arduino IDE](https://www.arduino.cc/en/software/)
+- [Sloeber](https://eclipse.baeyens.it)
 
 Although there are many IDE integrations for PlatformIO, Visual Studio Code is the most seen one, easily accessible via the extension manager.
 
@@ -25,31 +34,20 @@ The Arduino IDE targets the Arduino boards of course, but supports other flavour
 
 Next to the UI differences, you might notice that PlatformIO uses `.cpp` as a file extension versus `.ino` on the Arduino IDE 😉
 
-## Example Code
+The odd one out being Sloeber which is built on top of [Eclipse IDE](https://eclipseide.org), now part of the [Eclipse Foundation](https://www.eclipse.org). A very flexible and solid IDE, but over the years it lost its market share to Jetbrains and Visual Studio.
 
-```cpp
-#include <Arduino.h>
+Given the 'happy flow', programming microcontrollers happens in five ‘simple’ steps:
 
-// put function declarations here:
-int myFunction(int, int);
+- [Select](Arduino/README.md#Select) microcontroller
+- [Write](Arduino/README.md#Write) code
+- [Compile](Arduino/README.md#Compile) code
+- [Deploy](Arduino/README.md#Deploy) to the microcontroller
+- [Monitor](Arduino/README.md#Monitor) output
 
-void setup()
-{
-    // put your setup code here, to run once:
-    int result = myFunction(2, 3);
-}
+In the Arduino IDE, you'll find them here:
+![Five simple steps in the Arduino IDE](assets/arduino-ide.png)
 
-void loop()
-{
-    // put your main code here, to run repeatedly:
-}
-
-// put function definitions here:
-int myFunction(int x, int y)
-{
-    return x + y;
-}
-```
+These steps are explained in more detail in this [section](Arduino/README.md).
 
 ## Glossary
 

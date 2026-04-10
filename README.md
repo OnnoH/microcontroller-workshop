@@ -22,6 +22,8 @@ Of course the explanation on how to develop, program a peripheral, and putting i
 
 ## Development
 
+### Environment
+
 Three environments to develop applications for microcontrollers are:
 
 - [PlatformIO](https://platformio.org)
@@ -35,6 +37,8 @@ The Arduino IDE targets the Arduino boards of course, but supports other flavour
 Next to the UI differences, you might notice that PlatformIO uses `.cpp` as a file extension versus `.ino` on the Arduino IDE 😉
 
 The odd one out being Sloeber which is built on top of [Eclipse IDE](https://eclipseide.org), now part of the [Eclipse Foundation](https://www.eclipse.org). A very flexible and solid IDE, but over the years it lost its market share to Jetbrains and Visual Studio.
+
+### Process
 
 Given the 'happy flow', programming microcontrollers happens in five ‘simple’ steps:
 

@@ -12,6 +12,8 @@ Development with the help of the Arduino IDE:
 
 ## Select microcontroller
 
+### Boards Manager
+
 The Arduino IDE natively supports Arduino board, which is to be expected ;-)
 
 In order to select the right ESP board, they first have to be installed. The [Boards Manager](https://docs.arduino.cc/software/ide-v2/tutorials/ide-v2-board-manager/) needs to know where to get that information.
@@ -38,6 +40,15 @@ Note that on MacOS you may need to install the [Xcode Command Line Tools](https:
 ```shell
 xcode-select --install
 ```
+
+### Drivers
+
+On MacOS, connecting to a microcontroller either directly via USB or via an FTDI USB to Serial converter, will probably work out of the box. For Windows some drivers might be required. Some download links:
+
+- [CH340](https://sparks.gogo.co.nz/ch340.html)
+- [CP210x](https://www.silabs.com/software-and-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads)
+
+> TODO?? Explain UART and FDTI
 
 <a name="Write"></a>
 

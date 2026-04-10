@@ -2,6 +2,8 @@
 
 ![Board](assets/az-delivery-wroom-32%20devkitc-v4.jpg)
 
+https://docs.cirkitdesigner.com/component/de1ff842-ae52-41f8-9dbc-7e513b5bfd95
+
 ## Pinout
 
 ![Pinout](assets/az-delivery-wroom-32%20devkitc-pinout.png)

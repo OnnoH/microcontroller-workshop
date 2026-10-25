@@ -1,0 +1,104 @@
+name: ci
+
+# ONN-6: the acceptance criteria this workflow implements are carried in the
+# job names, so a reviewer can map a red check straight back to a criterion.
+#   AC-1  pio run for every Boxes/*/platformio.ini project
+#   AC-2  build Containers/Dockerfile.mkdocs
+#   AC-3  secret scan (gitleaks)
+#   AC-4  inventory the PlatformIO libraries per box
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  acceptance-tests:
+    name: AC-1..AC-4 · acceptance tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install --requirement .github/tests/requirements.txt
+      - run: pytest --verbose .github/tests
+
+  discover-boxes:
+    name: AC-1 · discover boxes
+    runs-on: ubuntu-latest
+    outputs:
+      boxes: ${{ steps.list.outputs.boxes }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: list
+        run: echo "boxes=$(.github/scripts/list-boxes.sh)" >> "$GITHUB_OUTPUT"
+
+  pio-build:
+    name: AC-1 · pio run (${{ matrix.box }})
+    needs: discover-boxes
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        box: ${{ fromJSON(needs.discover-boxes.outputs.boxes) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Cache PlatformIO platforms and toolchains
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.platformio
+            ~/.cache/pip
+          key: pio-${{ runner.os }}-${{ hashFiles('Boxes/*/platformio.ini') }}
+          restore-keys: pio-${{ runner.os }}-
+      - run: pip install --upgrade platformio
+      - env:
+          BOX: ${{ matrix.box }}
+        run: .github/scripts/pio-build.sh "$BOX"
+
+  mkdocs-image:
+    name: AC-2 · build Containers/Dockerfile.mkdocs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: docker build
+        run: |
+          docker build \
+            --file Containers/Dockerfile.mkdocs \
+            --tag microcontroller-workshop/mkdocs:ci \
+            Containers
+
+  secret-scan:
+    name: AC-3 · gitleaks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - run: .github/scripts/gitleaks.sh
+
+  dependency-audit:
+    name: AC-4 · PlatformIO library inventory
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Inventory the libraries declared per box
+        run: |
+          python3 .github/scripts/pio_deps_inventory.py --output pio-library-inventory.md
+          cat pio-library-inventory.md >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pio-library-inventory
+          path: pio-library-inventory.md

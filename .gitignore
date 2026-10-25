@@ -2,3 +2,5 @@
 .vscode
 .DS_Store
 Containers/data
+__pycache__
+.pytest_cache

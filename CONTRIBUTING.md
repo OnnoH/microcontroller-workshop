@@ -32,6 +32,24 @@ fix/main/my_contribution main`. Please avoid working directly on the
   the first line of the commit with the issue number in parentheses.
 - For documentation use the Markdown (.md) format.
 
+### Checks
+
+Every push and pull request runs the `ci` workflow
+([`.github/workflows/ci.yml`](.github/workflows/ci.yml)):
+
+- **AC-1 · `pio run`** - one job per `Boxes/*/platformio.ini`. The project
+  config has to resolve (board, platform, `lib_deps`); a box that has no sketch
+  committed yet is allowed to stop at PlatformIO's "Nothing to build", but once
+  it has sources under `src/` they have to compile.
+- **AC-2 · mkdocs image** - builds `Containers/Dockerfile.mkdocs`.
+- **AC-3 · gitleaks** - scans the history for secrets.
+- **AC-4 · library inventory** - lists what every box pins next to the newest
+  version in the PlatformIO registry, in the job summary. It fails only when a
+  declared library is absent from the registry.
+
+The criteria are themselves tested; run them locally with
+`pip install -r .github/tests/requirements.txt && pytest .github/tests`.
+
 ### Summary
 
 - Changes resulting in test pipeline failures will be reverted if they cannot
